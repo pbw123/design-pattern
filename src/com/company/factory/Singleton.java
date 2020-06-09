@@ -1,16 +1,16 @@
 package com.company.factory;
 /**
- 优点：既避免了同步带来的性能损耗，又能够延迟加载
+ 天然线程安全，可防止反射生成实例。
 
  */
-public class Singleton {
-    private Singleton() {
-    }
-    private static class SingletonHolder{
-        private static Singleton singleton = new Singleton();
+public enum Singleton {
+
+    INSTANCE;
+
+    public void init() {
+
+        System.out.println("资源初始化。。。");
+
     }
 
-    public static  Singleton getInstance() {
-        return SingletonHolder.singleton;
-    }
 }
