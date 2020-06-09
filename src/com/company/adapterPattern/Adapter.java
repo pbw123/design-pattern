@@ -1,4 +1,4 @@
-package com.company.AdapterPattern;
+package com.company.adapterPattern;
 /**
  * 适配器：充电器*/
 public class Adapter extends Phone implements Socket{

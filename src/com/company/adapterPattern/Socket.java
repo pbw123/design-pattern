@@ -1,4 +1,4 @@
-package com.company.AdapterPattern;
+package com.company.adapterPattern;
 
 /**
  * 插座*/

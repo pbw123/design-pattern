@@ -1,4 +1,4 @@
-package com.company.AdapterPattern;
+package com.company.adapterPattern;
 
 public abstract class Adapter3 implements Socket{
     @Override

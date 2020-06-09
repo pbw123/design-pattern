@@ -1,4 +1,4 @@
-package com.company.AdapterPattern;
+package com.company.adapterPattern;
 
 public class Adapter2 implements Socket{
     private Phone phone;

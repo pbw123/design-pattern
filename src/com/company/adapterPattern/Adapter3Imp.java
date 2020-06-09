@@ -1,4 +1,4 @@
-package com.company.AdapterPattern;
+package com.company.adapterPattern;
 
 public class Adapter3Imp extends Adapter3{
     @Override
