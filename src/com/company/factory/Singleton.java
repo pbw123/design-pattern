@@ -1,20 +1,22 @@
 package com.company.factory;
 /**
- ①声明静态私有类变量，且立即实例化，保证实例化一次
+ 优点：在获取实例的方法中，进行实例的初始化，节省系统资源
 
-②私有构造，防止外部实例化（通过反射是可以实例化的，不考虑此种情况）
+ 缺点：①如果获取实例时，初始化工作较多，加载速度会变慢，影响系统系能
 
-③提供public的getInstance（）方法供外部获取单例实例
+ ②每次获取实例都要进行非空检查，系统开销大
 
-好处：线程安全；获取实例速度快 缺点：类加载即初始化实例，内存浪费
+ ③非线程安全，当多个线程同时访问getInstance()时，可能会产生多个实例
  */
 public class Singleton {
-    private static Singleton instance = new Singleton();
-
+    private static Singleton instance = null;
     private Singleton() {
     }
 
-    public Singleton getInstance() {
+    public static Singleton getInstance() {
+        if (instance == null) {
+            instance = new Singleton();
+        }
         return instance;
     }
 }
