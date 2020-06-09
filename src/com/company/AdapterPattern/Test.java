@@ -6,4 +6,12 @@ public class Test {
         Adapter adapter = new Adapter();
         adapter.electric();
     }
+
+    /*对象适配模式*/
+    @org.junit.Test
+    public void test2() {
+        Phone phone = new Phone();
+        Adapter2 adapter = new Adapter2(phone);
+        adapter.electric();
+    }
 }
