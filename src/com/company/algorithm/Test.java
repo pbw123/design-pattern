@@ -29,4 +29,14 @@ public class Test {
             System.out.print(i+"_");
         }
     }
+
+    @org.junit.Test
+    public void insertSortTest() {
+        int[] arr = new int[]{5, 1, 9, 7, 10,8};
+        int[] ints = allAlgorithm.insertSort(arr);
+        System.out.print("插入排序：");
+        for (int i : ints) {
+            System.out.print(i+"—");
+        }
+    }
 }
