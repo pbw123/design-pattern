@@ -14,9 +14,19 @@ public class Test {
         System.out.println(s);
 
         int[] lists = allAlgorithm.bubbleSort(arrays);
-        System.out.print("从小到大排序：");
+        System.out.print("冒泡排序：");
         for (Integer list : lists) {
                 System.out.print(list + "-");
+        }
+    }
+
+    @org.junit.Test
+    public void selectSortTest() {
+        int[] arr = new int[]{5, 1, 9, 7, 10};
+        int[] ints = allAlgorithm.selectionSort(arr);
+        System.out.print("选择排序：");
+        for (int i : ints) {
+            System.out.print(i+"_");
         }
     }
 }
