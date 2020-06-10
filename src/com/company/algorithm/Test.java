@@ -4,6 +4,7 @@ import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class Test {
+    /**冒泡排序*/
     @org.junit.Test
     public void test() {
        int[] arrays= new int[]{10,7, 1, 9, 2, 8, 5,3,6,4,0};

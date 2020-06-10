@@ -7,25 +7,37 @@ public class allAlgorithm {
      * 冒泡排序
      * 原理：比较两个相邻的元素，较大的放在右边
      * N个数字要排序完成，总共进行N-1趟排序，每i趟的排序次数为(N-i)次
+     * 算法步骤
+     * 比较相邻的元素。如果第一个比第二个大，就交换他们两个。
+     * 对每一对相邻元素作同样的工作，从开始第一对到结尾的最后一对。这步做完后，最后的元素会是最大的数。
+     * 针对所有的元素重复以上的步骤，除了最后一个。
+     * 持续每次对越来越少的元素重复上面的步骤，直到没有任何一对数字需要比较。
      */
-    public static int[] bubbleSort(int[] list) {
-        int temp = 0;
-        boolean change = false;
-        for (int i = 0; i < list.length; i++) {
-            change = false;
-            for (int j = list.length - 1; j > i; j--) {
-                if (list[j - 1] > list[j]) {
-                    temp = list[j - 1];
-                    list[j - 1] = list[j];
-                    list[j] = temp;
-                    change = true;
+    public static int[] bubbleSort(int[] arr) {
+        for (int i = 1; i < arr.length; i++) {
+            // 设定一个标记，若为true，则表示此次循环没有进行交换，也就是待排序列已经有序，排序已经完成。
+            boolean flag = true;
+         /*   for (int j = arr.length - 1; j > i; j--) {
+                if (arr[j - 1] > arr[j]) {
+                    int temp = arr[j - 1];
+                    arr[j - 1] = arr[j];
+                    arr[j] = temp;
+                    flag = false;
+                }
+            }*/
+            for (int j = 0; j < arr.length - i; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    int temp = arr[j + 1];
+                    arr[j + 1] = arr[j];
+                    arr[j] = temp;
+                    flag = false;
                 }
             }
-            if (change == false) {
+            if (flag) {
                 break;
             }
         }
-        return list;
+        return arr;
     }
 
     /**
