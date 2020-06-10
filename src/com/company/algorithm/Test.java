@@ -40,4 +40,13 @@ public class Test {
             System.out.print(i+"—");
         }
     }
+
+    @org.junit.Test
+    public void binaryTest() {
+        int[] arr = new int[]{5, 1, 9, 7, 10,8};
+        Arrays.sort(arr);
+        System.out.println(Arrays.toString(arr));
+        int i = allAlgorithm.BinarySearch(arr, 10);
+        System.out.println(i+"----");
+    }
 }
